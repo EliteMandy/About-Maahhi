@@ -1,4 +1,5 @@
-var audio = new Audio('assets/sentmessage.mp3');
+var send = new Audio('assets/diya.mp3');
+var received = new Audio('assets/mila.mp3');
 var contactString = "<div class='social'> <a target='_blank' href='tel:+918003423827'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>8003423827</label></div> </a> <a href='mailto:manusingh98122@gmail.com'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/EliteMandy'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/918003423827'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://t.me/BleachSe7en'> <div class='socialItem'><img class='socialItemI' src='images/telegram.svg' alt=''></div> </a> <a target='_blank' href='https://instagram.com/maaaaahhi.se7en'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/mahendra-singh-605376228/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
 var resumeString = "<img src='images/resumeThumbnail.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>Mahendra Resume.pdf</label></div><a href='assets/Mahendra Singh Resume.pdf' download='Mahendra_Singh_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
 var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d846.7008369757757!2d84.78843744175488!3d22.2273673436027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1702981508970!5m2!1sen!2sin' class='map'></iframe></div><label class='add'><address>B208 'TCI'<br>Sunderghar<br>Rourkela, Odisha, INDIA 769004</address>";
@@ -63,7 +64,7 @@ function sendMsg() {
     s.scrollTop = s.scrollHeight;
     setTimeout(function () { waitAndResponce(ti) }, 1500);
     input.value = "";
-    playSound();
+    playSound1();
 }
 
 function waitAndResponce(inputText) {
@@ -144,7 +145,7 @@ function sendTextMessage(textToSend) {
     document.getElementById("listUL").appendChild(myLI);
     var s = document.getElementById("chatting");
     s.scrollTop = s.scrollHeight;
-    playSound();
+    playSound2();
 }
 
 
@@ -166,9 +167,12 @@ function sendResponse() {
     document.getElementById("listUL").appendChild(myLI);
     var s = document.getElementById("chatting");
     s.scrollTop = s.scrollHeight;
-    playSound();
+    playSound2();
 }
 
-function playSound() {
-    audio.play();
+function playSound1() {
+    send.play();
+}
+function playSound2(){
+    received.play();
 }
